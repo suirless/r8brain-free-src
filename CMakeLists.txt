@@ -8,6 +8,8 @@ file(GLOB R8BRAIN_SRC
 	"${CMAKE_CURRENT_SOURCE_DIR}/*.h"
 )
 
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+
 if (BUILD_STATIC)
     add_library(r8brain STATIC ${R8BRAIN_SRC})
 else()
