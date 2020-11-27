@@ -20,4 +20,8 @@ else()
     add_library(r8brain SHARED ${R8BRAIN_SRC})
 endif()
 
+if (BUILD_ENABLE_XBOX)
+    fresponze_create_xbox_target(r8brain)
+endif()
+
 target_include_directories(r8brain PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
